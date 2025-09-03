@@ -1,93 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Single Page Website</title>
-    <style>
-        /* ----- CSS Styling ----- */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
-            color: #333;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Personal Portfolio</title>
+  <style>
+    /* ----- CSS Styling ----- */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f2f2f2;
+      color: #333;
+    }
 
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
+    header {
+      background-color: #4CAF50;
+      padding: 40px 20px;
+      text-align: center;
+      color: white;
+    }
 
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
 
-        main {
-            padding: 40px;
-            text-align: center;
-        }
+    header p {
+      font-size: 18px;
+    }
 
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background: #007BFF;
-            border: none;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+    nav {
+      background: #333;
+      padding: 10px 0;
+      text-align: center;
+    }
 
-        button:hover {
-            background: #0056b3;
-        }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        footer {
-            background-color: #222;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #4CAF50;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    ul li::before {
+      content: "✓ ";
+      color: green;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #388e3c;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- ----- HTML Content ----- -->
-    <header>
-        <h1>Welcome to My Website</h1>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
+  <!-- ----- Header ----- -->
+  <header>
+    <h1>John Doe</h1>
+    <p>Aspiring Web Developer | Tech Enthusiast | Lifelong Learner</p>
+  </header>
 
-    <main>
-        <h2>Hello Visitor!</h2>
-        <p>This is a simple one-page website built with HTML, CSS, and JavaScript.</p>
-        <button onclick="showMessage()">Click Me</button>
-    </main>
+  <!-- ----- Navigation ----- -->
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <footer>
-        &copy; 2025 MyWebsite. All rights reserved.
-    </footer>
+  <!-- ----- Main Content ----- -->
+  <main>
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Hello! I'm John Doe, a passionate web developer with an interest in building responsive,
+        user-friendly websites. I enjoy solving problems, learning new technologies, and turning
+        ideas into reality on the web.
+      </p>
+    </section>
 
-    <!-- ----- JavaScript Code ----- -->
-    <script>
-        function showMessage() {
-            alert("Thanks for clicking the button!");
-        }
-    </script>
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML5, CSS3, JavaScript</li>
+        <li>Responsive Design</li>
+        <li>Git & GitHub</li>
+        <li>Basic React and Node.js</li>
+        <li>Problem Solving & Debugging</li>
+      </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact Information</h2>
+      <p>Email: john.doe@example.com</p>
+      <p>Phone: +123-456-7890</p>
+      <p>Location: New York, USA</p>
+      <button onclick="showThankYou()">Send Me a Message</button>
+    </section>
+  </main>
+
+  <!-- ----- Footer ----- -->
+  <footer>
+    &copy; 2025 John Doe. All rights reserved.
+  </footer>
+
+  <!-- ----- JavaScript ----- -->
+  <script>
+    function showThankYou() {
+      alert("Thank you for reaching out! I'll get back to you soon.");
+    }
+  </script>
 
 </body>
 </html>
+
 
 
